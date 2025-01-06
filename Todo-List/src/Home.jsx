@@ -5,6 +5,7 @@ import axios from 'axios';
 function Home() {
 
   const [updatedtask,setupTask]=useState();  
+  axios.defaults.withCredentials = true;
   const up=(id)=>{
    axios.put('https://todo-list-1gdk.vercel.app/update/'+id,{updatedtask:updatedtask})
    .then(result=>console.log(result))
