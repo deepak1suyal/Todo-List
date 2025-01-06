@@ -21,6 +21,7 @@ app.get("/don", (req, res) => {
     res.json("Deepak Don");
 })
 app.get('/get',(req,res)=>{
+        console.log("Deepak");
     TodoModel.find()
     .then(result=>res.json(result))
     .catch(err=>res.json(err))
