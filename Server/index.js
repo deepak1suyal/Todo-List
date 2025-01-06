@@ -16,6 +16,10 @@ mongoose.connect('mongodb+srv://dsuyal800:root@cluster0.fdftsrp.mongodb.net/test
 app.get("/", (req, res) => {
     res.json("Hello");
 })
+
+app.get("/don", (req, res) => {
+    res.json("Deepak Don");
+})
 app.get('/get',(req,res)=>{
     TodoModel.find()
     .then(result=>res.json(result))
