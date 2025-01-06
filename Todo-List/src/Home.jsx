@@ -6,23 +6,23 @@ function Home() {
 
   const [updatedtask,setupTask]=useState();  
   const up=(id)=>{
-   axios.put('http://localhost:3001/update/'+id,{updatedtask:updatedtask})
+   axios.put('https://todo-list-1gdk.vercel.app/update/'+id,{updatedtask:updatedtask})
    .then(result=>console.log(result))
    .catch(err=>console.log(err))
   }
     const [todo,setTodo]=useState([]);
     useEffect(()=>{
-     axios.get('http://localhost:3001/get')
+     axios.get('https://todo-list-1gdk.vercel.app/get')
      .then(result=>setTodo(result.data))
      .catch(err=>console.log(err))
     },[todo])
 const Edit=(id)=>{
-  axios.put('http://localhost:3001/update/'+id)
+  axios.put('https://todo-list-1gdk.vercel.app/update/'+id)
   .then(result=>console.log(result))
   .catch(err=>console.log(err))
 }
 const del=(id)=>{
-  axios.delete('http://localhost:3001/delete/'+id)
+  axios.delete('https://todo-list-1gdk.vercel.app/delete/'+id)
   .then(result=>{
     location.reload()
   })
