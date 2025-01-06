@@ -7,7 +7,7 @@ const TodoModel=require('./Models/Todo');
 const app=express();
 app.use(cors(  {
         origin: ["https://todo-list-iota-ten-74.vercel.app"],
-        methods: ["POST", "GET"],
+        methods: ["POST", "GET","PUT","DELETE"],
         credentials: true
     }));
 app.use(express.json());
