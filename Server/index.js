@@ -5,7 +5,11 @@ const mongoose=require('mongoose');
 const cors=require('cors');
 const TodoModel=require('./Models/Todo');
 const app=express();
-app.use(cors());
+app.use(cors(  {
+        origin: [""],
+        methods: ["POST", "GET"],
+        credentials: true
+    }));
 app.use(express.json());
 mongoose.connect('mongodb://127.0.0.1:27017/test');
 app.get('/get',(req,res)=>{
