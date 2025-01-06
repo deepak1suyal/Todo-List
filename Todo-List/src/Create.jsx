@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 function Create() {
     const [task,setTask]=useState();
+    axios.defaults.withCredentials = true;
     const A=()=>{
      axios.post('https://todo-list-1gdk.vercel.app/add',{task:task})
      .then(result=>console.log(result))
