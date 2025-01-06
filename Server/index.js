@@ -12,6 +12,9 @@ app.use(cors(  {
     }));
 app.use(express.json());
 mongoose.connect('mongodb+srv://dsuyal800:root@cluster0.fdftsrp.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0');
+app.get("/", (req, res) => {
+    res.json("Hello");
+})
 app.get('/get',(req,res)=>{
     TodoModel.find()
     .then(result=>res.json(result))
