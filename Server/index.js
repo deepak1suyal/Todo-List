@@ -6,7 +6,7 @@ const cors=require('cors');
 const TodoModel=require('./Models/Todo');
 const app=express();
 app.use(cors(  {
-        origin: [""],
+        origin: ["https://todo-list-iota-ten-74.vercel.app"],
         methods: ["POST", "GET"],
         credentials: true
     }));
