@@ -5,6 +5,7 @@ const mongoose=require('mongoose');
 const cors=require('cors');
 const TodoModel=require('./Models/Todo');
 const app=express();
+const PORT=3000;
 app.use(cors(  {
         origin: ["https://todo-list-iota-ten-74.vercel.app"],
         methods: ["POST", "GET","PUT","DELETE"],
