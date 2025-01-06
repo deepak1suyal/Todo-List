@@ -11,7 +11,7 @@ app.use(cors(  {
         credentials: true
     }));
 app.use(express.json());
-mongoose.connect('mongodb://127.0.0.1:27017/test');
+mongoose.connect('mongodb+srv://dsuyal800:root@cluster0.fdftsrp.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0');
 app.get('/get',(req,res)=>{
     TodoModel.find()
     .then(result=>res.json(result))
